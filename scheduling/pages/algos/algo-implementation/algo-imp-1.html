@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>All Algorithms Comparison</title>
+    <title>First Come First Serve (FCFS) - Implementation</title>
 
     <link
       rel="stylesheet"
       type="text/css"
-      href="./../Disk-Algos CSS/diskGraph.css"
+      href="./../Disk-Algos CSS/disk_algo.css"
     />
 
     <link
@@ -35,6 +35,8 @@
       crossorigin="anonymous"
     ></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -47,18 +49,12 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
     <link
       href="//fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&display=swap"
       rel="stylesheet"
     />
 
-    <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-
-    <script src="./../Disk-Algos JS/diskGraph.js"></script>
+    <script src="./../Disk-Algos JS/disk_algo1.js"></script>
   </head>
 
   <body style="scroll-behavior: smooth; text-decoration: none; outline: none">
@@ -76,6 +72,36 @@
           style="font-size: 20px; font-weight: 550"
           >Algorithms</a
         >
+        <a
+          class="navbar-brand"
+          href="diskGraph.html"
+          style="font-size: 20px; font-weight: 550"
+          >Graph</a
+        >
+        <a
+          class="navbar-brand ml-auto"
+          href="https://geektech1717.blogspot.com/2020/04/first-come-first-serve-scheduling.html?m=1"
+          style="
+            font-size: 20px;
+            font-weight: 550;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+          "
+          >Blog</a
+        >
+        <a
+          class="navbar-brand ml-auto"
+          href="https://www.youtube.com/watch?v=yP89YlEGCqA&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=75"
+          style="
+            font-size: 20px;
+            font-weight: 550;
+            position: absolute;
+            right: 100px;
+            top: 10px;
+          "
+          >Tutorial</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -90,17 +116,19 @@
       </nav>
       <br />
 
-      <div class="title text-center">
-        <br /><br />
-        <h1 class="mb-5">
-          Graph of Seek Time Comparison for All six Algorithms
-        </h1>
+      <div class="title">
+        <h1 class="mb-5">IMPLEMENTATION - First Come First Serve (FCFS)</h1>
+        <div class="btn col-md-8">
+          <a class="btn btn-outline-primary col-md-4" href="algo1.html"
+            >Concept</a
+          >
+        </div>
       </div>
     </div>
     <br />
     <br />
     <div class="pageContainer">
-      <h1 class="page-title">Bar Graph</h1>
+      <h1 class="page-title">First Come First Serve Algorithm</h1>
       <div class="inputs">
         <div class="number-input">
           <label for="numbers">Input Queue (separated with space): </label>
@@ -130,12 +158,6 @@
               class="form-control"
               placeholder="50"
             />
-
-            <select class="selectpicker" id="userInputDirection">
-              <option value="null">Select Direction</option>
-              <option value="right">Right</option>
-              <option value="left">Left</option>
-            </select>
           </div>
           <br />
           <br />
@@ -149,19 +171,27 @@
               Calculate
             </button>
           </div>
+          <br />
         </div>
         <div id="errorMessage"></div>
         <br />
       </div>
-      <br />
-      <br />
       <div class="canvas">
-        <canvas id="bar-chart"></canvas>
+        <canvas id="line-chart"></canvas>
         <button type="submit" class="btn btn-primary print printChart">
           Download Chart
         </button>
       </div>
+      <div id="count-output"></div>
     </div>
+    <!-- Template JavaScript -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+
+    <script src="assets/js/theme-change.js"></script>
+
+    <script src="assets/js/owl.carousel.js"></script>
+
+    <!-- disable body scroll which navbar is in active -->
     <script>
       $(function () {
         $(".navbar-toggler").click(function () {
@@ -200,7 +230,7 @@
     </script>
     <!--//MENU-JS-->
 
-    <!-- <script src="assets/js/bootstrap.min.js"></script> -->
+    <script src="assets/js/bootstrap.min.js"></script>
     <div class="container">
       <script src="./../../JS/particles.js"></script>
       <script src="./../../JS/app.js"></script>
