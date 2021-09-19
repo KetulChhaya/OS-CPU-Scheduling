@@ -30,38 +30,25 @@
             font-weight: 550;
             position: absolute;
             right: 100px;
-          "
-          >Tutorial</a
-        >
-      </nav>
-      <!-- <div class="parent"> -->
-      <div class="title">
-        <div class="text-center">
-          <h1 class="mb-5">SOME BASIC TERMINOLOGIES OF CPU SCHEDULING</h1>
-        </div>
-        <div class="d-flex justify-content-center video-frame">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/EWkQl0n0w5M"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-          <button
-            type="button"
-            class="btn btn-outline-light"
-            style="position: absolute; margin: auto; bottom: -5rem"
-          >
-            <a href="./pages/algos_index.html" style="text-decoration: none"
-              >View Scheduling Algos</a
-            >
-          </button>
-        </div>
+          ">Tutorial</a>
+    </nav>
+    <!-- <div class="parent"> -->
+    <div class="title">
+      <div class="text-center">
+        <h1 class="mb-5">SOME BASIC TERMINOLOGIES OF CPU SCHEDULING</h1>
+      </div>
+      <div class="d-flex justify-content-center video-frame">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/EWkQl0n0w5M" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <button type="button" class="btn btn-outline-light" style="position: absolute; margin: auto; bottom: -5rem">
+          <a href="./pages/algos_index.html" style="text-decoration: none">View Scheduling Algos</a>
+        </button>
       </div>
     </div>
-    <!-- </div> -->
+  </div>
+  <!-- </div> -->
   </div>
 
   <section class="w3l-homeblock3">
@@ -74,11 +61,10 @@
           <div class="col-lg-6 mt-lg-0 mt-3 about-right-faq align-self">
             <h3 class="title-big">CPU Scheduling</h3>
             <p class="mt-3">
-              CPU Scheduling is a process of determining which process will own CPU for execution while another process
-              is on hold. The main task of CPU scheduling is to make sure that whenever the CPU remains idle, the OS at
-              least select one of the processes available in the ready queue for execution. The selection process will
-              be carried out by the CPU scheduler. It selects one of the processes in memory that are ready for
-              execution.
+              CPU scheduling is basis of multiprogramming operating system. So in CPU scheduling we have several
+              processes kept in a memory at the same time, to utilize this time productively. So during this time what
+              happens is, when one process has to wait, the operating system takes CPU from that process and pass it to
+              another process. This is what the CPU scheduler commits to do.
             </p>
           </div>
         </div>
@@ -93,13 +79,17 @@
           <div class="col-lg-6 mt-lg-0 mt-3 about-right-faq align-self">
             <h3 class="title-big">Why CPU Scheduling</h3>
             <p class="mt-3">
-              A typical process involves both I/O time and CPU time. In a uni programming system like MS-DOS, time spent
-              waiting for I/O is wasted and CPU is free during this time. In multi programming systems, one process can
-              use CPU while another is waiting for I/O. This is possible only with process scheduling.
+              The reason we need multiprogramming system is that in a simple computer system only one process runs at a
+              time and all other processes have to wait for CPU to become free from its present process.
+              So what happens is in simple computer system CPU remains idle when the system requires an I/O request.
+              And this whole time as CPU remains idle this time is wasted in not utilizing the CPU.
+              This is called time wasted. Dispatcher is a special program which comes into play after the scheduler.
+              When the scheduler completes its job of selecting a process, it is the dispatcher which takes that process
+              to the desired state/queue.
             </p>
           </div>
           <div class="col-lg-6">
-            <img src="./assets/images/footer-back.jpg" alt="" class="radius-image img-fluid" />
+            <img src="./assets/images/dispacher.jpeg" alt="" class="radius-image img-fluid" />
           </div>
         </div>
       </div>
@@ -111,21 +101,28 @@
       <div class="container py-lg-5 py-md-3">
         <div class="row">
           <div class="col-lg-6">
-            <img src="./assets/images/footer-back.jpg" alt="" class="radius-image img-fluid" />
+            <img src="./assets/images/goals.png" alt="" class="radius-image img-fluid" />
           </div>
           <div class="col-lg-6 mt-lg-0 mt-3 about-right-faq align-self">
-            <h3 class="title-big">Goals of Disk Scheduling</h3>
+            <h3 class="title-big">Goals of CPU Scheduling</h3>
             <ul class="w3l-lists mt-4">
               <li>
-                <span class="fa fa-check" aria-hidden="true"></span>Fairness
+                <span class="fa fa-check" aria-hidden="true"></span>Fare allocation of CPU
               </li>
               <li>
-                <span class="fa fa-check" aria-hidden="true"></span>High
-                throughout
+                <span class="fa fa-check" aria-hidden="true"></span>Maximum CPU utilization
               </li>
               <li>
-                <span class="fa fa-check" aria-hidden="true"></span>Minimal
-                traveling head time
+                <span class="fa fa-check" aria-hidden="true"></span>Maximum throughput
+              </li>
+              <li>
+                <span class="fa fa-check" aria-hidden="true"></span>Minimum turnaround time
+              </li>
+              <li>
+                <span class="fa fa-check" aria-hidden="true"></span>Minimum waiting time
+              </li>
+              <li>
+                <span class="fa fa-check" aria-hidden="true"></span>Minimum response time
               </li>
             </ul>
           </div>
@@ -141,52 +138,48 @@
         <div class="col-lg-2 col-sm-6 grids-feature">
           <div class="area-box">
             <span class="fa"><img src="./assets/images/footer-back.jpg" height="30px" width="30px" /></span>
-            <h4>Seek Time</h4>
+            <h4>CPU utilization</h4>
             <p>
-              Seek time is the time taken to locate the disk arm to a
-              specified track where the data is to be read or write.
+              We want to keep CPU as busy as possible so that the process in the system remains productive.
             </p>
           </div>
         </div>
         <div class="col-lg-3 col-sm-6 grids-feature mt-sm-0 mt-5">
           <div class="area-box">
             <span class="fa"><img src="./assets/images/footer-back.jpg" height="30px" width="30px" /></span>
-            <h4>Rotational Latency</h4>
+            <h4>Throughput</h4>
             <p>
-              Rotational Latency is the time taken by the desired sector of
-              disk to rotate into a position so that it can access the
-              read/write heads.
+              It is measure of the work or the number is processes completed by CPU per unit time.
+              Throughout is more about CPU rather than process.
             </p>
           </div>
         </div>
         <div class="col-lg-3 col-sm-6 grids-feature mt-lg-0 mt-5">
           <div class="area-box">
             <span class="fa"><img src="./assets/images/footer-back.jpg" height="30px" width="30px" /></span>
-            <h4>Transfer Time</h4>
+            <h4>Turn Around Time</h4>
             <p>
-              Transfer time is the time to transfer the data. It depends on
-              the rotating speed of the disk and number of bytes to be
-              transferred.
+              It is time taken between submission of a process to CPU and completion of process. It means it will
+              include all the time period of CPU burst, I/O burst, ready state etc.
+              Turn around time is more about process than about CPU.
             </p>
           </div>
         </div>
         <div class="col-lg-2 col-sm-6 grids-feature mt-lg-0 mt-5">
           <div class="area-box">
             <span class="fa"><img src="./assets/images/footer-back.jpg" height="30px" width="30px" /></span>
-            <h4>Disk Access Time</h4>
+            <h4>Waiting Time</h4>
             <p>
-              Disk Access Time = Seek Time + Rotational Latency + Transfer
-              Time
+              t is the time taken by the system when it is in ready state or ready queue. It needs to me minimized.
             </p>
           </div>
         </div>
         <div class="col-lg-2 col-sm-12 grids-feature mt-lg-0 mt-5">
           <div class="area-box">
             <span class="fa"><img src="./assets/images/footer-back.jpg" height="30px" width="30px" /></span>
-            <h4>Disk Response Time</h4>
+            <h4>Response Time</h4>
             <p>
-              Response Time is the average of time spent by a request waiting
-              to perform its I/O operation
+              Time taken by the process to give the 1st respose after submitting process to CPU.
             </p>
           </div>
         </div>
@@ -221,11 +214,11 @@
                 <span class="fa fa-check" aria-hidden="true"></span>Round Robin Scheduling
               </li>
               <li>
-                <span class="fa fa-check" aria-hidden="true"></span>Multilevel Queue 
+                <span class="fa fa-check" aria-hidden="true"></span>Multilevel Queue
                 scheduling
               </li>
-              
-              
+
+
             </ul>
           </div>
           <div class="col-lg-6">
