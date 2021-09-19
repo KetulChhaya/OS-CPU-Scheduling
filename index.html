@@ -8,11 +8,11 @@
 
     <link rel="stylesheet" type="text/css" href="./css/homestyle.css" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <style>
+    <!-- <style>
       b {
         margin-left: 40%;
       }
-    </style>
+    </style> -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -35,99 +35,84 @@
   </head>
 
   <body>
-    <div id="particles-js">
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <b class="navbar-brand">OPERATING SYSTEM ALGORITHMS</b>
-        <a
-          class="navbar-brand"
-          href="./disk/Disk-Algos/about.html"
-          style="
-            font-size: 20px;
-            font-weight: 550;
-            position: absolute;
-            right: 20px;
-            top: 10px;
+    <div>
+      <div id="particles-js">
+        <!-- Image and text -->
+        <nav
+          class="
+            navbar navbar-dark
+            bg-transparent
+            os-nav
+            justify-content-center
+            pt-3
           "
-          >About Us</a
         >
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarColor01"
-          aria-controls="navbarColor01"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </nav>
-
-      <section>
-        <div class="container">
-          <a href="./disk/Disk-Algos/terminologies.html">
-            <div class="card" id="DiskScheduling">
-              <h4>Disk Scheduling</h4>
+          <div class="nav-div">
+            <a class="navbar-brand" href="#">
               <img
-                src="./disk/assets/OsImages/DiskScheduling.png"
-                alt="Disk Scheduling Image"
+                src="./scheduling/assets/images/os-logo.png"
+                width="30"
+                height="30"
+                class="d-inline-block align-top"
+                alt=""
               />
-              <div class="description">
-                <p class="des" scrolling="auto">
-                  Disk Scheduling is done by operating systems to schedule I/O
-                  requests for the disk. Disk Scheduling is also known as I/O
-                  Scheduling. The main goal of Disk Scheduling is to reduce the
-                  Seek Time and it is done by applying various Disk Scheduling
-                  Algorithms.
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a href="./Page/Page-Replacement.html">
-            <div class="card" id="PageReplacement">
-              <h4>Page Replacement</h4>
-              <img
-                src="./disk/assets/OsImages/PageReplacement.png"
-                alt="Page Replacement Image"
-              />
-              <div class="description">
-                <p class="des">
-                  In an operating system that uses paging for memory management,
-                  a page replacement algorithm is needed to decide which page
-                  needs to be replaced when new page comes in. The process of
-                  replacement is sometimes called swap out or write to disk.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <br />
-
-        <div class="container">
-          <div class="card" id="Deadlock&Concurrency">
-            <h4>Deadlock and Concurrency</h4>
-            <img
-              src="./disk/assets/OsImages/Deadlock.jpg"
-              alt="Deadlock Image"
-            />
-            <div class="description">
-              <p class="des">
-                faucibus ornare suspendisse sed nisi lacus sed viverra tellus in
-                hac habitasse platea dictumst vestibulum rhoncus est
-                pellentesque elit ullamcorper dignissim cras tincidunt lobortis
-                feugiat
-              </p>
-            </div>
+              Operating System Project
+            </a>
           </div>
-          <a href="./scheduling/scheduling_Index.html">
-            <div class="card" id="Scheduling">
-              <h4>Scheduling</h4>
+          <div class="mem-btn">
+            <a href="./scheduling/pages/team.html">
+              <button class="btn btn-outline-light my-2 my-sm-0">
+                Members
+              </button></a
+            >
+          </div>
+        </nav>
+
+        <section>
+          <div class="container">
+            <a href="./disk/Disk-Algos/terminologies.html">
+              <div class="card" id="DiskScheduling">
+                <h4>Disk Scheduling</h4>
+                <img
+                  src="./disk/assets/OsImages/DiskScheduling.png"
+                  alt="Disk Scheduling Image"
+                />
+                <div class="description">
+                  <p class="des" scrolling="auto">
+                    Disk Scheduling is done by operating systems to schedule I/O
+                    requests for the disk. Disk Scheduling is also known as I/O
+                    Scheduling. The main goal of Disk Scheduling is to reduce
+                    the Seek Time and it is done by applying various Disk
+                    Scheduling Algorithms.
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="./Page/Page-Replacement.html">
+              <div class="card" id="PageReplacement">
+                <h4>Page Replacement</h4>
+                <img
+                  src="./disk/assets/OsImages/PageReplacement.png"
+                  alt="Page Replacement Image"
+                />
+                <div class="description">
+                  <p class="des">
+                    In an operating system that uses paging for memory
+                    management, a page replacement algorithm is needed to decide
+                    which page needs to be replaced when new page comes in. The
+                    process of replacement is sometimes called swap out or write
+                    to disk.
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <div class="card" id="Deadlock&Concurrency">
+              <h4>Deadlock and Concurrency</h4>
               <img
-                src="./disk/assets/OsImages/Scheduling.png"
-                alt="Scheduling Image"
+                src="./disk/assets/OsImages/Deadlock.jpg"
+                alt="Deadlock Image"
               />
               <div class="description">
                 <p class="des">
@@ -138,11 +123,31 @@
                 </p>
               </div>
             </div>
-          </a>
-        </div>
-      </section>
-    </div>
+            <a href="./scheduling/scheduling_Index.html">
+              <div class="card" id="Scheduling">
+                <h4>Scheduling</h4>
+                <img
+                  src="./disk/assets/OsImages/Scheduling.png"
+                  alt="Scheduling Image"
+                />
+                <div class="description">
+                  <p class="des">
+                    faucibus ornare suspendisse sed nisi lacus sed viverra
+                    tellus in hac habitasse platea dictumst vestibulum rhoncus
+                    est pellentesque elit ullamcorper dignissim cras tincidunt
+                    lobortis feugiat
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
 
+          <br />
+
+          <div class="container"></div>
+        </section>
+      </div>
+    </div>
     <script src="./JS/particles.js"></script>
     <script src="./JS/app.js"></script>
   </body>
