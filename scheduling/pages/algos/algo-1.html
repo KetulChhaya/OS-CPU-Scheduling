@@ -18,6 +18,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
   </head>
 
   <body style="scroll-behavior: smooth; text-decoration: none; outline: none">
@@ -105,7 +109,7 @@
       <section class="w3l-homeblock3">
         <div class="midd-w3 py-5">
           <div class="container py-lg-5 py-md-3">
-            <div class="row">
+            <div class="row" style="align-items: center">
               <div class="col-lg-6">
                 <img
                   src="../../assets/images/fcfs-1.PNG"
@@ -116,30 +120,46 @@
               <div class="col-lg-6 mt-lg-0 mt-3 about-right-faq align-self">
                 <h3 class="title-big">First Come First Serve(FCFS)</h3>
                 <p class="mt-3">
-                  FCFS is the simplest of all the Disk Scheduling Algorithms. In
-                  FCFS, the requests are addressed in the order they arrive in
-                  the disk queue.Let us understand this with the help of an
-                  example.
+                  The process which will request for CPU first will be allocated
+                  the CPU first in this Algorithm. The implementation of FCFS is
+                  done by FIFO (First In First Out) Queue. When the CPU is free,
+                  it is allocated the process at head of the queue. So, when
+                  process enters ready queue, its PCB is linked onto tail of
+                  ready queue, And the running process is removed from the
+                  queue.
+                  <br />
+                  Characteristics of FCFS: 1)It supports non-preemptive and
+                  pre-emptive scheduling algorithm. 2)Jobs are always executed
+                  on a first-come, first-serve basis. 3)It is easy to implement
+                  and use. 4)This method is poor in performance, and the general
+                  wait time is quite high.
                 </p>
                 <ul class="w3l-lists mt-4">
                   <h3 class="title-small">Advantages:</h3>
                   <li>
                     <span class="fa fa-check" aria-hidden="true"></span>Every
-                    request gets a fair chance
+                    process gets chance according to request they sent for use
+                    of CPU.
                   </li>
                   <li>
-                    <span class="fa fa-check" aria-hidden="true"></span>No
-                    indefinite postponement
+                    <span class="fa fa-check" aria-hidden="true"></span>It is
+                    simple as there is no postponement of process while one
+                    process is running.
                   </li>
 
                   <h3 class="title-small">DisAdvantages:</h3>
                   <li>
-                    <span class="fa fa-times" aria-hidden="true"></span>Does not
-                    try to optimize seek time
+                    <span class="fa fa-times" aria-hidden="true"></span>As we
+                    know FCFS is non-preemptive, and also it doesn’t allow the
+                    process which can give CPU efficient time management, it is
+                    not a good algorithm because it has long Average waiting
+                    time.
                   </li>
                   <li>
-                    <span class="fa fa-times" aria-hidden="true"></span>May not
-                    provide the best possible service
+                    <span class="fa fa-times" aria-hidden="true"></span>The
+                    reason we have Round-robin algorithm is to eliminate the
+                    disadvantages of FCFS algorithm as there is no mobility or
+                    freedom to make processes efficient.
                   </li>
                 </ul>
               </div>
