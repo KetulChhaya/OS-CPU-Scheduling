@@ -49,7 +49,6 @@
 }
 
 label {
-  font-size: 1.5rem;
   padding-bottom: 2%;
 }
 
@@ -135,10 +134,15 @@ input#inputNumbers {
 
 div.pageContainer {
   text-align: left;
-  padding: 2% 15% 3% 16%;
+  padding: 5px;
   width: 90%;
 }
 
 div#errorMessage {
   margin-top: 10px;
+}
+
+.input-container{
+  display:flex;
+  justify-content: space-evenly;
 }
