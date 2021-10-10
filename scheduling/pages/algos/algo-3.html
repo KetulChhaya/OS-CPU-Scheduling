@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shortest Job First (SJF) - Explanation</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../assets/css/starter.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../../assets/css/index.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+  </head>
+
+  <body style="scroll-behavior: smooth; text-decoration: none; outline: none">
+    <div id="particles-js">
+      <nav class="navbar navbar-expand-lg navbar-dark p-3">
+        <a
+          class="navbar-brand"
+          href="../../../index.html"
+          style="font-size: 20px; font-weight: 550"
+          >Home</a
+        >
+        <a
+          class="navbar-brand"
+          href="../algos_index.html"
+          style="font-size: 20px; font-weight: 550; margin-left: 2rem"
+          >Algorithms</a
+        >
+        <a
+          class="navbar-brand"
+          href="../graph.html"
+          style="font-size: 20px; font-weight: 550; margin-left: 2rem"
+          >Graph</a
+        >
+        <a
+          class="navbar-brand ml-auto"
+          target="_blank"
+          href="https://www.loc.gov/item/lcwaN0007982/"
+          style="
+            font-size: 20px;
+            font-weight: 550;
+            position: absolute;
+            right: 20px;
+          "
+          >Blog</a
+        >
+        <a
+          class="navbar-brand ml-auto"
+          target="_blank"
+          href="https://www.guru99.com/round-robin-scheduling-example.html"
+          style="
+            font-size: 20px;
+            font-weight: 550;
+            position: absolute;
+            right: 100px;
+          "
+          >Tutorial</a
+        >
+      </nav>
+      <!-- <div class="parent"> -->
+      <div class="title">
+        <div class="text-center">
+          <h1 class="mb-5">Round Robin Algorithm</h1>
+        </div>
+        <div class="d-flex justify-content-center video-frame">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/-jFGYDfWkXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+          <button
+            type="button"
+            class="btn btn-outline-light"
+            style="position: absolute; margin: auto; bottom: -5rem"
+          >
+            <a
+              href="./algo-implementation/algo-imp-3.html"
+              style="text-decoration: none"
+            >
+              Algorithm</a
+            >
+          </button>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+
+    <br />
+    <br />
+    <div class="container">
+      <section class="w3l-homeblock3">
+        <div class="midd-w3 py-5">
+          <div class="container py-lg-5 py-md-3">
+            <div class="row" style="align-items: center">
+              <div class="col-lg-6">
+                <img
+                  src="../../assets/images/rr-1.jpeg"
+                  alt=""
+                  class="radius-image img-fluid"
+                />
+              </div>
+              <div class="col-lg-6 mt-lg-0 mt-3 about-right-faq align-self">
+                <h3 class="title-big">Round Robin Algorithm</h3>
+                <p class="mt-3">
+                    Round Robin Algorithm is designed for making a time-sharing system in CPU scheduling. It is similar to FCFS but we have to say that preemption is added to FCFS which gives us Round Robin algorithm. A small unit of time is added, or we can say a process will be allowed only that amount of time for the first round and then will be given to next process in wait. This time is called time quantum. Time quantum may have different values as per user or systems. </br></br>
+                    Here New process are added to tail of ready queue, which leads to 2 different possibilities:</br> 1) CPU burst time is less than time quantum</br> 2) CPU burst time is more than time quantum, and accordingly the system will give the CPU to the processes.   
+                </p>
+                <ul class="w3l-lists mt-4">
+                  <h3 class="title-small">Advantages:</h3>
+                  <li>
+                    <span class="fa fa-check" aria-hidden="true"></span>Every process gets an equal share of the CPU.
+                  </li>
+                  <li>
+                    <span class="fa fa-check" aria-hidden="true"></span>RR is cyclic in nature, so there is no starvation. 
+                  </li>
+                  <li>
+                        <span class="fa fa-check" aria-hidden="true"></span>This scheduling method does not depend upon burst time. That’s why it is easily implementable on the system.
+                      </li>
+                  </li>
+
+                  <h3 class="title-small">DisAdvantages:</h3>
+                  <li>
+                    <span class="fa fa-times" aria-hidden="true"></span>Setting the quantum too short, increases the overhead and lowers the CPU efficiency, but setting it too long may cause poor response to short processes.
+                  </li>
+                  <li>
+                    <span class="fa fa-times" aria-hidden="true"></span>Average waiting time under the RR policy is often long.
+                  </li>
+                  <li>
+                    <span class="fa fa-times" aria-hidden="true"></span>Finding a correct time quantum is a quite difficult task in this system. 
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h3
+        class="text-dark font-weight-bold text-align-center"
+        style="font-family: 'Roboto', sans-serif"
+      >
+        Example:
+      </h3>
+      <hr class="my-4" />
+      <div style="display: flex; justify-content: center">
+        <img
+          src="../../assets/images/rr-2.jpeg"
+          style="width: 100%; height: auto"
+        />
+      </div>
+      <br />
+    </div>
+    <script src="../../assets/js/particles.js"></script>
+    <script src="../../assets/js/app.js"></script>
+  </body>
+</html>
