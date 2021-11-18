@@ -5,6 +5,10 @@ This project has implemented four scheduling algos:
 - SJF
 - RRA
 - LJF
+<img width="1259" alt="Screenshot 2021-11-18 at 10 25 02 PM" src="https://user-images.githubusercontent.com/81903319/142469095-5682dd71-3155-46c9-8308-83098f244322.png">
+
+
+<img width="1264" alt="Screenshot 2021-11-18 at 10 54 26 PM" src="https://user-images.githubusercontent.com/81903319/142469111-dcb08808-567c-45da-8a9b-d8781d07fac0.png">
 
 **Add the arrival time and burst time for different processes you want to consider for the implementation of the algorithm by entering arrival time, Burst time and then click on ADD.**
 
